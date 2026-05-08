@@ -11,7 +11,23 @@ jobs:
 
     steps:
       - name: simple-web
-        run: pwd
+        run: 
+          pwd
           ls -al
           echo "This is the first cicd step" >> a.txt
           cat a.txt
+
+
+  Github-variable-check-job:
+    runs-on: linux-latest
+
+    steps:
+      - name: multiple-lines
+        run: |
+              echo "line 1"
+              echo "line 2"
+      - name: Github-variable-check
+        run: |
+          echo $GITHUB_SHA
+          echo $GITHUB_REPOSITORY
+
