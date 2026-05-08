@@ -19,7 +19,7 @@ jobs:
 
 
   Github-variable-check-job:
-    runs-on: linux-latest
+    runs-on: ubuntu-latest
 
     steps:
       - name: multiple-lines
