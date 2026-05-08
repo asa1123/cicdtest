@@ -30,4 +30,15 @@ jobs:
         run: |
           echo $GITHUB_SHA
           echo $GITHUB_REPOSITORY
+  
+  secret-variable-check-job:
+    runs-on: ubuntu-latest
+
+    steps:
+        - name: secret-variable-check
+          run:  
+            echo ${{secrets.EC2_USER}}
+            echo ${{secrets.EC2_PEM_KEY}}
+
+
 
